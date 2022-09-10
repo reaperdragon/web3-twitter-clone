@@ -26,12 +26,6 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("walletAddress") && isWalletConnected) {
-      router.push("/");
-    }
-  }, [router, isWalletConnected]);
-
   return (
     <>
       {isWalletConnected && localStorage.getItem("walletAddress") ? (
