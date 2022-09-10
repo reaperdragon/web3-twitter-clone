@@ -6,7 +6,13 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract TwitterApp {
     // Logging the event
-    event TweetCreated(string msg);
+    event TweetCreated(
+        uint256 id,
+        string text,
+        string hash,
+        string date,
+        address user
+    );
 
     // Name of the App, owner address
     string private name;
@@ -56,7 +62,7 @@ contract TwitterApp {
         tweet.date = _date;
         tweet.user = msg.sender;
 
-        emit TweetCreated("Tweet Created");
+        emit TweetCreated(tweetIdC, _tweet_text, _hash, _date, msg.sender);
     }
 
     //get tweet
