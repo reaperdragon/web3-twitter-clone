@@ -8,7 +8,7 @@ describe("Twitter App", async function () {
 
     await contractDeploy.deployed();
 
-    await contractDeploy.createTweet("First Tweet", "No Media");
+    await contractDeploy.createTweet("First Tweet", "No Media","19 Jun");
 
     let tweetId = await contractDeploy.getTweet(1);
 
