@@ -8,8 +8,9 @@ export default function Home() {
   return (
     <div>
       <Head>
+        
         <title>Twitter</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/twitter.png" />
       </Head>
       <div className="grid grid-cols-3 md:grid-cols-[15%,auto]  justify-items-stretch">
         <Sidebar />
