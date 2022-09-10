@@ -1,6 +1,8 @@
+import { ApolloProvider } from "@apollo/client";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../styles/globals.css";
+import client from "../client";
 
 function MyApp({ Component, pageProps }) {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
@@ -29,7 +31,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {isWalletConnected && localStorage.getItem("walletAddress") ? (
-        <Component {...pageProps} />
+        <ApolloProvider client={client}>
+          <Component {...pageProps} />
+        </ApolloProvider>
       ) : (
         <div className="flex justify-center items-center h-screen">
           <div className="flex justify-center items-center flex-col">
