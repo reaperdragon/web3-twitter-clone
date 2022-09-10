@@ -42,19 +42,21 @@ const Main = () => {
 
   const tweet = async () => {
     const contract = await getContract();
+    let date = String(new Date());
     if (!tweetText) {
       alert("Please Enter Your Tweet");
     } else {
       if (image !== "") {
         const img = await client.add(image);
 
-        await contract.createTweet(tweetText, img.path);
-        console.log(tweetText, img.path);
+        await contract.createTweet(tweetText, img.path, date);
+        console.log(tweetText, img.path, date);
       } else {
         const img = await client.add("no_image");
-        await contract.createTweet(tweetText, img.path);
 
-        console.log(tweetText, img.path);
+        await contract.createTweet(tweetText, img.path, date);
+
+        console.log(tweetText, img.path, date);
       }
     }
 
