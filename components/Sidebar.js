@@ -8,6 +8,14 @@ import { AiOutlineUser } from "react-icons/ai";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { BiUserCircle } from "react-icons/bi";
 
+const truncateRegex = /^(0x[a-zA-Z0-9]{4})[a-zA-Z0-9]+([a-zA-Z0-9]{4})$/;
+
+const truncateEthAddress = (addr) => {
+  const match = addr.match(truncateRegex);
+  if (!match) return addr;
+  return `${match[1]}…${match[2]}`;
+};
+
 const Sidebar = () => {
   return (
     <div className="h-screen w-full sticky top-0">
@@ -46,8 +54,11 @@ const Sidebar = () => {
           </div>
         </div>
 
-        <div>
+        <div className="flex items-center justify-center flex-col">
           <BiUserCircle className="text-sky-500 w-10 h-10 mt-2" />
+          <span className="font-body">
+            {truncateEthAddress(localStorage.getItem("walletAddress"))}
+          </span>
         </div>
       </div>
     </div>

@@ -6,10 +6,16 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-[15%,auto]  justify-items-stretch">
-      <Sidebar />
-      <Main />
-      <ExploreBar/>
+    <div>
+      <Head>
+        <title>Twitter</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="grid grid-cols-3 md:grid-cols-[15%,auto]  justify-items-stretch">
+        <Sidebar />
+        <Main />
+        <ExploreBar />
+      </div>
     </div>
   );
 }
