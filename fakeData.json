@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "trend": "Gaming",
+    "title": "Trailer released for a new action-RPG from Team Ninja, Rise of Ronin",
+    "tweet": 25789
+  },
+  {
+    "id": "2",
+    "trend": "Ethereum Merge",
+    "title": "Ethereum Merge is coming on 15 SEP,2022",
+    "tweet": 154853
+  },
+  {
+    "id": "3",
+    "trend": "JavaScript",
+    "title": "Jack the Forge Still Learning JS Fundamentals",
+    "tweet": 546
+  },
+  {
+    "id": "4",
+    "trend": "Web3",
+    "title": "is it necessary to use create-web3-dapp ?",
+    "tweet": 5647
+  }
+]

@@ -77,8 +77,8 @@ const Main = () => {
   }
 
   return (
-    <div className="w-full">
-      <div className="flex flex-col w-[100%] border-b-[1.5px] border-gray-700 sticky top-0 bg-black">
+    <div className="w-full border-l-[1.5px] border-r-[1.5px] border-b-[1.5px] border-gray-700">
+      <div className="flex flex-col w-[100%] border-b-[1.5px] border-gray-700 sticky top-0 bg-black ">
         <textarea
           className="font-body placeholder:text-black-400 block bg-black w-full  py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500  focus:ring-1 sm:text-sm"
           placeholder="What's Happening?"
