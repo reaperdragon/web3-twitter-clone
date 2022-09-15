@@ -181,6 +181,7 @@ const Main = () => {
                 <div className="py-3 rounded-md">
                   <img
                     data-src="https://ik.imagekit.io/demo/default-image.jpg"
+                    loading="lazy"
                     src={ipfsURI + data.hash}
                     alt="image"
                     className="w-full rounded-md"
