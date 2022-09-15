@@ -98,9 +98,8 @@ const Main = () => {
 
         await contract.createTweet(tweetText, img.path, date);
       } else {
-        const img = await client.add("no_image");
-
-        await contract.createTweet(tweetText, img.path, date);
+        
+        await contract.createTweet(tweetText, "nO_Im4ge", date);
       }
     }
 
@@ -117,6 +116,8 @@ const Main = () => {
     if (!uploadedFile) return;
     setImage(uploadedFile);
   }
+
+  console.log(tweets)
 
   return (
     <div className="w-full border-l-[1.5px] border-r-[1.5px] border-b-[1.5px] border-gray-700">
@@ -171,7 +172,7 @@ const Main = () => {
 
               <h3 className="text-lg">{data.text}</h3>
 
-              {data.hash === process.env.NEXT_PUBLIC_HASH ? null : (
+              {data.hash === "nO_Im4ge" ? null : (
                 <div className="py-3 rounded-md">
                   <img
                     data-src="https://ik.imagekit.io/demo/default-image.jpg"
