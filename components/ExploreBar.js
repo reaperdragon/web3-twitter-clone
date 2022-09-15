@@ -3,7 +3,7 @@ import FakeData from "../fakeData.json";
 
 const ExploreBar = () => {
   return (
-    <div className="md:hidden flex items-center justify-start flex-col pt-2 pb-2 pr-10 pl-10">
+    <div className="md:hidden flex items-center justify-start flex-col pt-2 pb-2 pr-10 pl-10 h-screen w-full sticky top-0">
       <input
         placeholder="web3 💪🏻"
         className="mb-10 w-full h-10 rounded-full py-2 pl-9 pr-3 focus:outline-none focus:border-sky-500  focus:ring-1 sm:text-sm font-body "
