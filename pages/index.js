@@ -12,7 +12,7 @@ export default function Home() {
         <title>Twitter</title>
         <link rel="icon" href="/twitter.png" />
       </Head>
-      <div className="grid grid-cols-3 md:grid-cols-[15%,auto]  justify-items-stretch">
+      <div className="grid grid-cols-[25%,auto,30%] md:grid-cols-[15%,auto]  justify-items-stretch">
         <Sidebar />
         <Main />
         <ExploreBar />
