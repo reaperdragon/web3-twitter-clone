@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        
         <title>Twitter</title>
         <link rel="icon" href="/twitter.png" />
       </Head>
