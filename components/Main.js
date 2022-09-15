@@ -62,7 +62,6 @@ const Main = () => {
         fetchPolicy: "network-only",
       })
       .then(({ data }) => {
-        console.log(data);
         setTweets(data);
       })
       .catch((error) => {
@@ -98,13 +97,10 @@ const Main = () => {
         const img = await client.add(image);
 
         await contract.createTweet(tweetText, img.path, date);
-        console.log(tweetText, img.path, date);
       } else {
         const img = await client.add("no_image");
 
         await contract.createTweet(tweetText, img.path, date);
-
-        console.log(tweetText, img.path, date);
       }
     }
 
@@ -113,12 +109,10 @@ const Main = () => {
   };
 
   function triggerOnChange() {
-    console.log("Click");
     imageRef.current.click();
   }
 
   async function handleFileChange(e) {
-    console.log("Clicking");
     const uploadedFile = e.target.files[0];
     if (!uploadedFile) return;
     setImage(uploadedFile);
