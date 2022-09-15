@@ -166,20 +166,27 @@ const Main = () => {
       <div>
         {tweets?.tweets?.length > 0 &&
           tweets?.tweets?.map((data) => (
-            <div key={data.id} className="mb-8 ">
-              <p>{truncateEthAddress(data.user)}</p>
+            <div
+              key={data.id}
+              className="mt-4 font-body px-6 border-b-[1.5px] border-gray-700 pb-4"
+            >
+              <div className="flex gap-3">
+                <p className="text-sky-600">{truncateEthAddress(data.user)}</p>
+                <p className="text-stone-500">{moment(data.date).fromNow()}</p>
+              </div>
+
+              <h3 className="text-lg">{data.text}</h3>
 
               {data.hash === process.env.NEXT_PUBLIC_HASH ? null : (
-                <div>
+                <div className="py-3 rounded-md">
                   <img
                     data-src="https://ik.imagekit.io/demo/default-image.jpg"
                     src={ipfsURI + data.hash}
                     alt="image"
+                    className="w-full rounded-md"
                   />
                 </div>
               )}
-              <h3>{data.text}</h3>
-              <p>{moment(data.date).fromNow()}</p>
             </div>
           ))}
       </div>
