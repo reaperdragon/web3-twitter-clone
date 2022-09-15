@@ -31,7 +31,11 @@ Now It will be available in GitHub Account.
 
 #### Clone
 
-- Clone this repo with url `https://github.com/Aakrut/web3-twitter-clone`
+- Clone this repo with url
+
+```shell
+git clone https://github.com/Aakrut/web3-twitter-clone
+```
 
 ##### Setup
 
