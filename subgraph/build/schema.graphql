@@ -1,0 +1,8 @@
+type Tweet @entity {
+  id:ID!
+  text:String!
+  hash:String!
+  date:String
+  user:Bytes!
+  createdAt: BigInt!
+}
