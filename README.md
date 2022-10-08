@@ -80,6 +80,21 @@ npx hardhat run scripts/deploy.js --network mumbai
 NEXT_PUBLIC_CONTRACT_ADDRESS="CONTRACT_ADDRESS"
 ```
 
+## For Setting up Graph Protocol - [The Graph](https://thegraph.com/en/)
+
+now replace the graph url with 
+```
+NEXT_PUBLIC_GRAPHQL_URL="GRAPHQL_URL"
+```
+
+Let's Run this command for dev
+
+```shell
+npm run dev
+--or--
+yarn dev
+```
+
 ### Screenshots
 
 #### Web
