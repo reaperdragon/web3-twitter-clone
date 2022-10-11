@@ -2,11 +2,6 @@
 
 ### Built with Next Js, Hardhat, Solidity, IPFS, The Graph Protocol and Tailwind CSS.
 
-### Functionalities
-
-- Tweet with Image or Wihout Image
-
-
 ### Stack
 
 - Frontend : [Next Js](https://nextjs.org/)
